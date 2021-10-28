@@ -1,5 +1,5 @@
 % the doc class is a modified ITE paper template
-\documentclass{cta-author}
+\documentclass{two-col-epfl}
 
 % importing bibliography packages and files
 \usepackage[
@@ -12,14 +12,15 @@ sorting=ynt
 
 \begin{document}
 
+\headertitle{Project proposal - CS-503}
+\footertitle{Submission for the first assignment of the CS-503 course at EPFL}
+
 %% generating the title section
 \title{Deep Robust Navigation with Cognitive Mapping Visual Representations}
 
-\author{Titouan Renard $^1$, Umer Hasan $^2$, Yongtao Wu $^3$}
+\author{Titouan Renard $^1$}
 
-\address{\add{1}{MT-RO, 272257}
-\add{2}{IN-H, 347099}
-\add{3}{IN-H, 346107}}
+\address{\add{1}{MT-RO, 272257}}
 \maketitle
 
 % core text
@@ -37,12 +38,16 @@ sorting=ynt
 
 \section{Introduction}
 
-%% TODO, mention the fact that we worry about drones?
+\begin{figure}[tbph]
+  \centering
+  \includegraphics[width=0.4\textwidth]{figures/example_figure.jpeg}
+  \caption{Integer feugiat libero ut malesuada sollicitudin. In ornare, enim quis aliquet volutpat.} 
+\end{figure}
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis neque id ex faucibus pellentesque. Nam nulla sem, porta at mollis vitae, pretium ac lectus. Aenean varius erat leo, sit amet maximus sem fringilla id. In nibh sem, sodales eget placerat nec, elementum vel lorem. Cras vel odio odio. Integer feugiat libero ut malesuada sollicitudin. In ornare, enim quis aliquet volutpat, justo nisl consequat ipsum, quis feugiat sem mauris id ipsum. Aenean tincidunt vulputate lectus a congue. Ut in lorem ante. Nulla fermentum libero magna, faucibus consectetur lacus maximus et. Nunc dui urna, consectetur ut convallis eu, egestas a augue. Aliquam erat volutpat. Fusce blandit sapien sed ex sagittis consequat. Duis eleifend ipsum non turpis lacinia ultrices.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis neque id ex faucibus pellentesque. Nam nulla sem, porta at mollis vitae, pretium ac lectus \cite{chaplot2020learning}. Aenean varius erat leo, sit amet maximus sem fringilla id. In nibh sem, sodales eget placerat nec, elementum vel lorem. Cras vel odio odio. Integer feugiat libero ut malesuada sollicitudin. In ornare, enim quis aliquet volutpat, justo nisl consequat ipsum, quis feugiat sem mauris id ipsum. Aenean tincidunt vulputate lectus a congue. Ut in lorem ante. Nulla fermentum libero magna, faucibus consectetur lacus maximus et. Nunc dui urna, consectetur ut convallis eu, egestas a augue. Aliquam erat volutpat. Fusce blandit sapien sed ex sagittis consequat. Duis eleifend ipsum non turpis lacinia ultrices.
 
-Aliquam urna neque, lacinia eu faucibus eget, placerat ac odio. Integer sed orci justo. Mauris placerat magna eget quam tincidunt, non suscipit ipsum venenatis. Proin consequat scelerisque turpis ac mattis. In velit urna, pellentesque nec nibh consequat, ullamcorper viverra enim. Nullam tempus ante vel quam egestas pellentesque. Vivamus odio nibh, tristique vitae justo quis, ullamcorper dignissim felis.
+Aliquam urna neque, lacinia eu faucibus eget, placerat ac odio. Integer sed orci justo. Mauris placerat magna eget quam tincidunt, non suscipit ipsum venenatis. Proin consequat scelerisque turpis ac mattis. In velit urna, pellentesque nec nibh consequat, ullamcorper viverra enim. Nullam tempus ante vel quam egestas pellentesque. Vivamus odio nibh, tristique vitae justo quis, ullamcorper dignissim felis \cite{chaplot2020object}.
 
 Nam dictum risus nisl, id eleifend urna condimentum et. Duis ut risus aliquet, semper quam sit amet, dignissim dui. Vestibulum ut ante scelerisque, scelerisque odio vel, malesuada magna. Proin enim mi, rutrum at condimentum vitae, placerat quis quam. Aliquam lacus sem, aliquam sed placerat volutpat, faucibus quis felis. Nunc ultrices ut turpis non tempus. Phasellus lacus felis, ultrices nec risus eu, fermentum sodales tellus.
 
@@ -51,7 +56,7 @@ Nam dictum risus nisl, id eleifend urna condimentum et. Duis ut risus aliquet, s
 
 \subsection{Proposed Neural Architecture}
 
-Nam dictum risus nisl, id eleifend urna condimentum et. Duis ut risus aliquet, semper quam sit amet, dignissim dui. Vestibulum ut ante scelerisque, scelerisque odio vel, malesuada magna. Proin enim mi, rutrum at condimentum vitae, placerat quis quam. Aliquam lacus sem, aliquam sed placerat volutpat, faucibus quis felis. Nunc ultrices ut turpis non tempus. Phasellus lacus felis, ultrices nec risus eu, fermentum sodales tellus.
+Nam dictum risus nisl, id eleifend urna condimentum et. Duis ut risus aliquet, semper quam sit amet, dignissim dui. Vestibulum ut ante scelerisque, scelerisque odio vel, malesuada magna. Proin enim mi, rutrum at condimentum vitae, placerat quis quam. Aliquam lacus sem, aliquam sed placerat volutpat, faucibus quis felis. Nunc ultrices ut turpis non tempus. Phasellus lacus felis, ultrices nec risus eu, fermentum sodales tellus \cite{elfes1987sonar}.
 
 \subsubsection{Mapper Architecture}
 
@@ -90,14 +95,5 @@ Furthermore we hypothesize that using supervised training to initialize well cho
 
 The decoupled training procedure above is only thought of as a way to initialize the network weights. We plan to train our network "end-to-end" (while fixing the mid-level representations networks) using PPO.
 \printbibliography
-\newpage
-\section*{Appendix 1: network architecture schematic}
-\begin{figure}[tbph]
-  \centering
-  \includegraphics[width=\textwidth]{figures/network_schematic2.pdf}
-  \caption{Proposed network architecture.}
-  \vspace{-3mm}
-  \label{fig:net_arch}
-\end{figure}
 
 \end{document}
