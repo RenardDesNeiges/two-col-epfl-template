@@ -398,7 +398,7 @@
 \def\today{\number\day/\ifcase\month\or
  1\or 2\or 3\or 4\or 5\or 6\or 7\or 8\or 9\or 10\or 11\or 12\fi/\number\year}
 
-\newcommand{\evenpagefooter}{\vbox{\hbox to \textwidth{\hfill\textit{Project proposal - CS-503}}
+\newcommand{\evenpagefooter}{\vbox{\hbox to \textwidth{\hfill\textit{\@headertitle}}
 \ifIET
 \vbox{\hbox to \textwidth{\thepage\hfill EPFL \cyear@info}}
 \else
@@ -561,6 +561,7 @@
 
 % Clearemptydoublepage should really clear the running heads too
 \newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titling Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1420,8 +1421,8 @@
 \fi
 \fi
 
-\CYear{2021}
-\Year{2021}
+\CYear{\the\year{}}
+\Year{\the\year{}}
 
 \def\correnvelope{\includegraphics{IET_email_icon.eps}}%
 
